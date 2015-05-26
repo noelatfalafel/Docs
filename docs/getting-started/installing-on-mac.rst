@@ -1,6 +1,7 @@
 Installing ASP.NET 5 On Mac OS X
 ================================
-By :ref:`Steve Smith <installing-on-mac-author>` | Originally Published: 28 April 2015 
+
+By `Steve Smith`_
 
 ASP.NET 5 runs on the .NET Execution Environment (DNX), which is available on multiple platforms, including OS X. This article describes how to install DNX, and therefore ASP.NET 5, on OS X, using `Homebrew <http://brew.sh/>`_. 
 
@@ -30,6 +31,8 @@ Once Homebrew is installed, install the DNVM by running ``brew tap aspnet/dnx`` 
 
 .. image:: installing-on-mac/_static/brew-tap-aspnetdnx.png
 
+If you had an older version of our Homebrew "tap" configured, you might get the following error: ``Could not create link for aspnet/dnx/kvm, as it conflicts with aspnet/k/kvm``. In that case, simply run ``brew uninstall kvm`` to ensure any old versions of ``kvm`` are removed, then ``brew untap aspnet/k`` to remove the old tap. After that, the ``brew tap aspnet/dnx`` command should succeed.
+
 Next, run the command ``brew install dnvm`` to install the .NET Version Manager. This will also automatically install the latest DNX package from the https://www.nuget.org/api/v2 feed. 
 
 .. image:: installing-on-mac/_static/brew-install-dnvm.png
@@ -57,6 +60,3 @@ Related Resources
 - :doc:`Installing ASP.NET 5 on Windows <installing-on-windows>`
 - :doc:`Your First ASP.NET 5 Application Using Visual Studio </tutorials/your-first-aspnet-application>`
 
-.. _installing-on-mac-author:
-
-.. include:: /_authors/steve-smith.txt

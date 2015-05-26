@@ -6,27 +6,35 @@
 ASP.NET 5 Documentation
 =======================
 
+.. include:: stub-overview.txt
+
 .. toctree::
-   :maxdepth: 2
-   
-   getting-started/index
-   tutorials/index
-   conceptual-overview/index
-   fundamentals/index
-   dnx/index
-   publishing/index
-   client-side/index
-   security/index
-   extensibility/index
+    :titlesonly:
+    
+    getting-started/index
+    tutorials/index
+    conceptual-overview/index
+    fundamentals/index
+    dnx/index
+    data/index
+    publishing/index
+    client-side/index
+    mobile/index
+    security/index
+    performance/index
+    migration/index
 
-Related Topics
---------------
-
-:doc:`ASP.NET MVC <mvc/index>`
- 
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+    :caption: Frameworks
+    
+    mvc/index
    
 Contribute
 ----------
+
+The documentation on this site is the handiwork of our many `contributors <https://github.com/aspnet/docs/contributors>`_.
 
 **We accept pull requests!** But you're more likely to have yours accepted if you follow these guidelines:
 

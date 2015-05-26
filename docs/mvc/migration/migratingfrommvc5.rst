@@ -1,6 +1,7 @@
 Migrating From ASP.NET MVC 5 to MVC 6
 =====================================
-By :ref:`Steve Smith <migratingfrommvc5-author>` | Originally Published: 28 April 2015 
+
+By `Steve Smith`_ 
 
 Migrating from ASP.NET MVC 5 to ASP.NET 5 and MVC 6 requires a few steps to complete, since ASP.NET 5 introduces a number of new concepts. In this article you will learn how to migrate from the ASP.NET MVC 5 default project template to ASP.NET MVC 6, including initial setup, basic controllers and views, static content, and client side dependencies.
 
@@ -21,7 +22,7 @@ For the purposes of this article, we will be starting from the default ASP.NET M
 
 .. image:: migratingfrommvc5/_static/new-project-select-mvc-template.png
 
-If you prefer, you can `view or download the MVC 5 Project used in this article </https://github.com/aspnet/Docs/tree/master/samples/MigratingFromMvc5/Mvc5Project>`_.
+If you prefer, you can `view or download the MVC 5 Project used in this article <https://github.com/aspnet/Docs/tree/master/samples/MigratingFromMvc5/Mvc5Project>`_.
 
 This sample web project will demonstrate how to migrate an MVC 5 web project that includes controllers, views, and ASP.NET Identity models, as well as startup and configuration logic common to many MVC 5 projects.
 
@@ -75,6 +76,8 @@ Modify Index.cshtml to show a welcome message:
 Run the application - you should see Hello World output in your browser.
 
 .. image:: migratingfrommvc5/_static/hello-world.png
+
+.. _migrate-controllers-views-static:
 
 Migrate Basic Controllers, Views, and Static Content
 ----------------------------------------------------
@@ -252,6 +255,3 @@ Summary
 
 Migrating from ASP.NET MVC 5 to ASP.NET MVC 6 requires several steps, but is not overly difficult. Basic features like the models, views, and controllers that comprise an MVC application can be migrated largely without changes. Most of the changes affect static content and features related to static content, like bundling, as well as configuration steps for the application. By following the steps in this example, you should be able to quickly migrate most ASP.NET MVC 5 applications.
 
-.. _migratingfrommvc5-author:
-
-.. include:: /_authors/steve-smith.txt

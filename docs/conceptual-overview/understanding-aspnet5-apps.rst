@@ -1,6 +1,7 @@
 Understanding ASP.NET 5 Web Apps
 ================================
-By :ref:`Steve Smith <understanding-aspnet5-apps-author>` | Updated : 27 April 2015 
+
+By `Steve Smith`_
 
 ASP.NET 5 introduces several new fundamental concepts of web programming that are important to understand in order to productively create web apps. These concepts are not necessarily new to web programming in general, but are new to ASP.NET and thus are likely new to many developers whose experience with web programming has mainly been using ASP.NET and Visual Studio.
 
@@ -82,12 +83,12 @@ The **scripts** section is used to specify when certain build automation scripts
 The global.json File
 --------------------
 
-The global.json file is used to configure the solution as a whole. It includes just two sections, ``sources`` and ``sdk`` by default.
+The global.json file is used to configure the solution as a whole. It includes just two sections, ``projects`` and ``sdk`` by default.
 
 .. literalinclude:: understanding-aspnet5-apps/sample/global.json
 	:language: javascript
 
-The *sources* property designates which folders contain source code for the solution. By default the project structure places source files in a *src* folder, allowing build artifacts to be placed in a sibling folder, making it easier to exclude such things from source control.
+The *projects* property designates which folders contain source code for the solution. By default the project structure places source files in a *src* folder, allowing build artifacts to be placed in a sibling folder, making it easier to exclude such things from source control.
 
 .. image:: understanding-aspnet5-apps/_static/solution-files.png
 
@@ -139,7 +140,7 @@ The *References* folder details the server-side references for the project. It s
 Configuring the Application
 ---------------------------
 
-ASP.NET 5 no longer stores configuration settings in XML files (*web.config* and *machine.config*). Configuration is now stored in *config.json*, which was designed specifically for storing app configuration settings. The default ASP.NET project template includes Entity Framework, and so specifies the database connection string details in the *config.json&* file included in the project.
+ASP.NET 5 no longer stores configuration settings in XML files (*web.config* and *machine.config*). Configuration is now stored in *config.json*, which was designed specifically for storing app configuration settings. The default ASP.NET project template includes Entity Framework, and so specifies the database connection string details in the *config.json* file included in the project.
 
 .. image:: understanding-aspnet5-apps/_static/config-json.png
 
@@ -147,11 +148,11 @@ Individual entries within *config.json* are not limited to name-value pairs, but
 
 There's nothing special about the *config.json* filename - it's specified by name in Startup.cs_. You can add as many different configuration files as makes sense for your app, rather than having to add to an ever-growing *web.config* file. You're also not limited to just JSON-formatted files - you can still use XML or even .INI files if you prefer.
 
-Accessing configuration data from your app is best done by injecting the ``IConfiguration <https://github.com/aspnet/Configuration/blob/dev/src/Microsoft.Framework.ConfigurationModel.Interfaces/IConfiguration.cs>``_ interface into your controller, and then simply calling its ``Get`` method with the name of the configuration element you need. For example, to store the application name in config and display it on the About page, you would need to make three changes to the default project. First, add the entry to *project.config*.
+Accessing configuration data from your app is best done by injecting the `IConfiguration <https://github.com/aspnet/Configuration/blob/dev/src/Microsoft.Framework.ConfigurationModel.Interfaces/IConfiguration.cs>`_ interface into your controller, and then simply calling its ``Get`` method with the name of the configuration element you need. For example, to store the application name in config and display it on the About page, you would need to make three changes to the default project. First, add the entry to *config.json*.
 
 .. image:: understanding-aspnet5-apps/_static/add-config.png
 
-Next, make sure ASP.NET knows what to return when a constructor requires an instance of ``IConfiguration``. In this case, we can specify that the configuration value is a singleton, since we don't expect it to change throughout the life of the application. We'll address *Startup.cs* in a moment, but for this step just add one line to the end of the ConfigureServices() method in *Startup.cs*:
+Next, make sure ASP.NET knows what to return when a constructor requires an instance of ``IConfiguration``. In this case, we can specify that the configuration value is a singleton, since we don't expect it to change throughout the life of the application. We'll address *Startup.cs* in a moment, but for this step just add one line to the end of the ``ConfigureServices()`` method in *Startup.cs*:
 
 .. code-block:: c#
 	
@@ -267,6 +268,3 @@ Summary
 
 ASP.NET 5 introduces a few concepts that didn't exist in previous versions of ASP.NET. Rather than working with *web.config*, packages.config, and a variety of project properties stored in the .csproj/.vbproj file, developers can now work with specific files and folders devoted to specific purposes. Although at first there is some learning curve, the end result is more secure, more maintainable, works better with source control, and has better separation of concerns than the approach used in previous versions of ASP.NET.
 
-.. _understanding-aspnet5-apps-author:
-
-.. include:: /_authors/steve-smith.txt

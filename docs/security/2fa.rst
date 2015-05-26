@@ -1,6 +1,7 @@
-Two-factor authenication with SMS using ASP.NET Identity
-========================================================
-By :ref:`Pranav Rastogi <2fa-author>` | Originally Published: 28 April 2015 
+Two-factor Authentication with SMS Using ASP.NET Identity
+=========================================================
+
+By `Pranav Rastogi`_
 
 This tutorial will show you how to set up Two-factor authentication (2FA) using SMS.
 
@@ -142,7 +143,7 @@ Let us run the Web site and show the two-factor authentication flow.
 
 .. image:: 2fa/_static/login2fa5.png
 
-- Enable two-factor authenication.
+- Enable two-factor authentication.
 
 .. image:: 2fa/_static/login2fa6.png
 
@@ -186,6 +187,3 @@ Summary
 
 ASP.NET Identity can be used to add two-factor authentication.
 
-.. _2fa-author:
-
-.. include:: /_authors/pranav-rastogi.txt

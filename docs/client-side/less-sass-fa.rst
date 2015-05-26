@@ -1,6 +1,7 @@
 Styling Applications with Less, Sass, and Font Awesome
 ======================================================
-By :ref:`Steve Smith <less-sass-fa-author>` | Originally Published: 28 April 2015 
+
+By `Steve Smith`_
 
 Users of web applications have increasingly high expectations when it comes to style and overall experience. Modern web applications frequently leverage rich tools and frameworks for defining and managing their look and feel in a consistent manner. Frameworks like `Bootstrap`_ can go a long way toward defining a common set of styles and layout options for the web sites. However, most non-trivial sites also benefit from being able to effectively define and maintain styles and cascading style sheet (CSS) files, as well as having easy access to non-image icons that help make the site's interface more intuitive. That's where languages and tools that support `Less`_ and `Sass`_, and libraries like `Font Awesome`_, come in.
 
@@ -325,7 +326,7 @@ Less provides a number of additional features, but this should give you some ide
 Sass
 ----
 
-Sass is similar to Less, providing support for many of the same features, but with slightly different syntax. It is built using Ruby, rather than JavaScript, and so has different setup requirements. The original Sass language did not use curly braces or semicolons, but instead defined scope using white space and indentation. In version 3 of Sass, a new syntax was introduced, **SCSS** ("Sassy CSS"). SCSS is similar to CSS in that it ignore indentation levels and whitespace, and instead uses semicolons and curly braces.
+Sass is similar to Less, providing support for many of the same features, but with slightly different syntax. It is built using Ruby, rather than JavaScript, and so has different setup requirements. The original Sass language did not use curly braces or semicolons, but instead defined scope using white space and indentation. In version 3 of Sass, a new syntax was introduced, **SCSS** ("Sassy CSS"). SCSS is similar to CSS in that it ignores indentation levels and whitespace, and instead uses semicolons and curly braces.
 
 To install Sass, typically you would first install Ruby (pre-installed on Mac), and then run:
 
@@ -594,6 +595,3 @@ Summary
 
 Modern web applications increasingly demand responsive, fluid designs that are clean, intuitive, and easy to use from a variety of devices. Managing the complexity of the CSS stylesheets required to achieve these goals is best done using a pre-processor like Less or Sass. In addition, toolkits like Font Awesome quickly provide well-known icons to textual navigation menus and buttons, improving the overall user experience of your application.
 
-.. _less-sass-fa-author:
-
-.. include:: /_authors/steve-smith.txt
